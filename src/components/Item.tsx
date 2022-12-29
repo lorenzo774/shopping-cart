@@ -1,5 +1,5 @@
 import { ItemType } from "../data/items";
-import { ProductType } from "../types/cart";
+import { ProductType } from "./Product";
 
 type ItemProps = {
     onAddClicked: (product: ProductType) => void;
