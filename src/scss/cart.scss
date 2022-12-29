@@ -1,0 +1,31 @@
+.cart {
+    .list {
+        .list-item {
+            .quantity-handler {
+                margin: 10px 0;
+                display: flex;
+                gap: 10px;
+
+                .increase {
+                    background: transparent;
+                    border-color: blue;
+                    &:hover {
+                        background: blue;
+                    }
+                    &:active {
+                        background: rgb(0, 0, 97);
+                    }
+                }
+                .decrease {
+                    border-color: red;
+                    &:hover {
+                        background: red;
+                    }
+                    &:active {
+                        background: rgb(81, 0, 0);
+                    }
+                }
+            }
+        }
+    }
+}

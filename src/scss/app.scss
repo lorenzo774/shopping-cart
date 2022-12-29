@@ -1,0 +1,138 @@
+@import "./utils.scss";
+@import "./vars.scss";
+@import "./cart.scss";
+@import "https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+a,
+button {
+    text-align: center;
+    color: $default-fg;
+    font-family: "Fira Code", "Comic Sans MS";
+}
+
+button {
+    border-radius: $border-radius;
+    width: 100%;
+    background: transparent;
+    padding: 10px 40px;
+    border: 2px solid $btn-color;
+    transition: all ease 0.3s;
+
+    &:hover {
+        background: $btn-color;
+    }
+
+    &:active {
+        background: $btn-bg-active;
+    }
+}
+
+a {
+    user-select: none;
+}
+
+img {
+    border-radius: $border-radius;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h4 {
+    font-size: 1.5rem;
+}
+h5 {
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    @extend .center;
+    width: 100%;
+    min-height: $header-height;
+    position: fixed;
+    top: 0;
+    background: $header-bg;
+
+    nav {
+        display: flex;
+        justify-content: right;
+
+        a {
+            margin-right: 3vw;
+            font-size: 1.5rem;
+        }
+    }
+
+    nav,
+    h1,
+    div {
+        flex: 1;
+    }
+}
+
+footer {
+    @extend .center;
+    height: 100px;
+}
+
+.content {
+    flex: 1;
+    @extend .center;
+    flex-direction: column;
+}
+
+.app {
+    background-color: $body-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.link-btn {
+    text-decoration: none;
+
+    p {
+        border-radius: $border-radius;
+        background: $link-btn-bg;
+        padding: 15px 30px;
+        margin: 10px;
+        width: fit-content;
+    }
+}
+
+.list {
+    margin-top: $header-height;
+    @extend .center;
+    padding: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .list-item {
+        border: 2px solid white;
+        border-radius: $border-radius;
+        padding: 10px;
+        max-width: 300px;
+        text-align: left;
+
+        h5 {
+            min-height: 4rem;
+        }
+    }
+}
