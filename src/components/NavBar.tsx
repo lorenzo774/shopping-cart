@@ -3,20 +3,22 @@ import {
     faHome,
     faShop,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import LinkIcon from "./LinkIcon";
 
 const NavBar = () => (
     <nav>
-        <Link to="/">
-            <FontAwesomeIcon icon={faHome} />
-        </Link>
-        <Link to="/shop">
-            <FontAwesomeIcon icon={faShop} />
-        </Link>
-        <Link to="/cart">
-            <FontAwesomeIcon icon={faCartShopping} />
-        </Link>
+        <LinkIcon
+            to="/"
+            icon={faHome}
+        />
+        <LinkIcon
+            to="/shop"
+            icon={faShop}
+        />
+        <LinkIcon
+            to="/cart"
+            icon={faCartShopping}
+        />
     </nav>
 );
 
